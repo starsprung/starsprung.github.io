@@ -1,0 +1,25 @@
+name: Docs
+on:
+  repository_dispatch:
+    types: [build_docs]
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('version/*') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+
+      - name: Release
+        env:
+          REPO_NAME: amazon-order-reports-api
+        run: bash build.sh
