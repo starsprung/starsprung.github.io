@@ -1,2 +1,1 @@
-# starsprung.github.io
 Hello
