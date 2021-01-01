@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 GITHUB_REPO="https://github.com/starsprung/${REPO_NAME}.git"
 
 VERSION_DIR=version

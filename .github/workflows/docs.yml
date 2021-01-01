@@ -19,7 +19,8 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
 
-      - name: Release
+      - name: Build amazon-order-reports-api docs
         env:
           REPO_NAME: amazon-order-reports-api
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
         run: bash build.sh
