@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>amazon-order-reports-api | amazon-order-reports-api</title>
+	<title>Cookie | amazon-order-reports-api</title>
 	<meta name="description" content="Documentation for amazon-order-reports-api">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2646,7 +2646,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">amazon-order-reports-api</a></strong>
+					<strong><a href="../index.html">amazon-order-reports-api</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2677,101 +2677,243 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
-			<a href="enums/loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
+			<a href="../enums/loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
 		</li>
 		<li class=" tsd-kind-class">
-			<a href="classes/amazonorderreportsapi.html" class="tsd-kind-icon">Amazon<wbr>Order<wbr>Reports<wbr>Api</a>
+			<a href="../classes/amazonorderreportsapi.html" class="tsd-kind-icon">Amazon<wbr>Order<wbr>Reports<wbr>Api</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-is-external">
-			<a href="interfaces/cookie.html" class="tsd-kind-icon">Cookie</a>
+		<li class="current tsd-kind-interface tsd-is-external">
+			<a href="cookie.html" class="tsd-kind-icon">Cookie</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#domain" class="tsd-kind-icon">domain</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#expires" class="tsd-kind-icon">expires</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#httponly" class="tsd-kind-icon">http<wbr>Only</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#name" class="tsd-kind-icon">name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#path" class="tsd-kind-icon">path</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#samesite" class="tsd-kind-icon">same<wbr>Site</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#secure" class="tsd-kind-icon">secure</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#session" class="tsd-kind-icon">session</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#size" class="tsd-kind-icon">size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="cookie.html#value" class="tsd-kind-icon">value</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/orderitem.html" class="tsd-kind-icon">Order<wbr>Item</a>
+			<a href="orderitem.html" class="tsd-kind-icon">Order<wbr>Item</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/refund.html" class="tsd-kind-icon">Refund</a>
+			<a href="refund.html" class="tsd-kind-icon">Refund</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<div class="tsd-panel tsd-typography">
-			<a href="#amazon-order-reports-api" id="amazon-order-reports-api" style="color: inherit; text-decoration: none;">
-				<h1>amazon-order-reports-api</h1>
-			</a>
-			<p>Scrapes orders and refunds from Amazon.com.</p>
-			<p>There&#39;s no offical API to retrieve these, so this library uses <a href="https://github.com/puppeteer/puppeteer/">Puppeteer</a> internally to access them. As this isn&#39;t an officially supported API, it may break at any time. Puppeteer comes with some other caveats, notably when running in Docker. See <a href="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md">Puppeteer&#39;s troubleshooting section</a> if you run into issues.</p>
-			<p>This library has only been tested on Amazon.com with the language set to English. It&#39;s unknown if it will work in other regions/languages.</p>
-			<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-				<h2>Installation</h2>
-			</a>
-			<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> </span><span style="color: #001080">amazon</span><span style="color: #000000">-</span><span style="color: #001080">order</span><span style="color: #000000">-</span><span style="color: #001080">reports</span><span style="color: #000000">-</span><span style="color: #001080">api</span>
-</code></pre>
-			<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-				<h2>Usage</h2>
-			</a>
-			<pre><code><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">AmazonOrderReportsApi</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;amazon-order-reports-api&#039;</span><span style="color: #000000">;</span>
-
-<span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">api</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">AmazonOrderReportsApi</span><span style="color: #000000">({</span>
-<span style="color: #000000">    </span><span style="color: #001080">username:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test@example.com&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #001080">password:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;password1234&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">    </span><span style="color: #008000">// Or use otpFn</span>
-<span style="color: #000000">    </span><span style="color: #001080">otpSecret:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;USJF YSN7 87YR PP4D AN78 FAAF 81D8 1PU9 JJRF QP87 9UDM IO3W SJRY&#039;</span>
-<span style="color: #000000">  });</span>
-
-<span style="color: #000000">  </span><span style="color: #AF00DB">for</span><span style="color: #000000"> </span><span style="color: #AF00DB">await</span><span style="color: #000000"> (</span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">item</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">api</span><span style="color: #000000">.</span><span style="color: #795E26">getItems</span><span style="color: #000000">({</span>
-<span style="color: #000000">    </span><span style="color: #001080">startDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2020-10-01&#039;</span><span style="color: #000000">),</span>
-<span style="color: #000000">    </span><span style="color: #001080">endDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2020-12-31&#039;</span><span style="color: #000000">)</span>
-<span style="color: #000000">  })) {</span>
-<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">item</span><span style="color: #000000">);</span>
-<span style="color: #000000">  }</span>
-
-<span style="color: #000000">  </span><span style="color: #AF00DB">for</span><span style="color: #000000"> </span><span style="color: #AF00DB">await</span><span style="color: #000000"> (</span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">refund</span><span style="color: #000000"> </span><span style="color: #0000FF">of</span><span style="color: #000000"> </span><span style="color: #001080">api</span><span style="color: #000000">.</span><span style="color: #795E26">getRefunds</span><span style="color: #000000">({</span>
-<span style="color: #000000">    </span><span style="color: #001080">startDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2020-10-01&#039;</span><span style="color: #000000">),</span>
-<span style="color: #000000">    </span><span style="color: #001080">endDate:</span><span style="color: #000000"> </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;2020-12-31&#039;</span><span style="color: #000000">)</span>
-<span style="color: #000000">  })) {</span>
-<span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">refund</span><span style="color: #000000">);</span>
-<span style="color: #000000">  }</span>
-
-<span style="color: #000000">  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">api</span><span style="color: #000000">.</span><span style="color: #795E26">stop</span><span style="color: #000000">();</span>
-<span style="color: #000000">})();</span>
-</code></pre>
-			<a href="#api" id="api" style="color: inherit; text-decoration: none;">
-				<h2>API</h2>
-			</a>
-			<p>API docs are available on the <a href="https://docs.starsprung.com/amazon-order-reports-api/">docs site</a></p>
-			<a href="#email-notifications" id="email-notifications" style="color: inherit; text-decoration: none;">
-				<h2>Email notifications</h2>
-			</a>
-			<p>As a side effect of generating an order report, Amazon will send an email notification that the order report is ready. This can generate a large volume of emails if reports are retrieved frequently. In many mail providers, an e-mail filter can be used to delete or move these emails. E.g. in Gmail:</p>
-			<pre><code><span style="color: #000000">from:(</span><span style="color: #001080">no</span><span style="color: #000000">-</span><span style="color: #001080">reply</span><span style="color: #000000">@</span><span style="color: #001080">amazon</span><span style="color: #000000">.</span><span style="color: #001080">com</span><span style="color: #000000">) subject:(</span><span style="color: #001080">Your</span><span style="color: #000000"> </span><span style="color: #001080">order</span><span style="color: #000000"> </span><span style="color: #001080">history</span><span style="color: #000000"> </span><span style="color: #001080">report</span><span style="color: #000000">)</span>
-</code></pre>
-		</div>
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Represents a browser cookie.</p>
+				</div>
+			</div>
+		</section>
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">Cookie</span>
+				</li>
+			</ul>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section ">
-						<h3>Enumerations</h3>
+					<section class="tsd-index-section tsd-is-external">
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-enum"><a href="enums/loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#domain" class="tsd-kind-icon">domain</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#expires" class="tsd-kind-icon">expires</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#httponly" class="tsd-kind-icon">http<wbr>Only</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#name" class="tsd-kind-icon">name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#path" class="tsd-kind-icon">path</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#samesite" class="tsd-kind-icon">same<wbr>Site</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#secure" class="tsd-kind-icon">secure</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#session" class="tsd-kind-icon">session</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#size" class="tsd-kind-icon">size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="cookie.html#value" class="tsd-kind-icon">value</a></li>
 						</ul>
 					</section>
-					<section class="tsd-index-section ">
-						<h3>Classes</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-class"><a href="classes/amazonorderreportsapi.html" class="tsd-kind-icon">Amazon<wbr>Order<wbr>Reports<wbr>Api</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section ">
-						<h3>Interfaces</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/cookie.html" class="tsd-kind-icon">Cookie</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/orderitem.html" class="tsd-kind-icon">Order<wbr>Item</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/refund.html" class="tsd-kind-icon">Refund</a></li>
-						</ul>
-					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-external">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="domain" class="tsd-anchor"></a>
+				<h3>domain</h3>
+				<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:515</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie domain.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="expires" class="tsd-anchor"></a>
+				<h3>expires</h3>
+				<div class="tsd-signature tsd-kind-icon">expires<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:519</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie Unix expiration time in seconds.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="httponly" class="tsd-anchor"></a>
+				<h3>http<wbr>Only</h3>
+				<div class="tsd-signature tsd-kind-icon">http<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:523</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie http only flag.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="name" class="tsd-anchor"></a>
+				<h3>name</h3>
+				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:511</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie name.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="path" class="tsd-anchor"></a>
+				<h3>path</h3>
+				<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:517</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie path.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="samesite" class="tsd-anchor"></a>
+				<h3>same<wbr>Site</h3>
+				<div class="tsd-signature tsd-kind-icon">same<wbr>Site<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SameSiteSetting</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:529</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie same site definition.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="secure" class="tsd-anchor"></a>
+				<h3>secure</h3>
+				<div class="tsd-signature tsd-kind-icon">secure<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:527</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie secure flag.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="session" class="tsd-anchor"></a>
+				<h3>session</h3>
+				<div class="tsd-signature tsd-kind-icon">session<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:525</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The session cookie flag.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="size" class="tsd-anchor"></a>
+				<h3>size</h3>
+				<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:521</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie size</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="value" class="tsd-anchor"></a>
+				<h3>value</h3>
+				<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in node_modules/@types/puppeteer/index.d.ts:513</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The cookie value.</p>
+					</div>
 				</div>
 			</section>
 		</section>
