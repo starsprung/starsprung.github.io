@@ -2692,6 +2692,9 @@ img {
 					<a href="amazonorderreportsapi.html#getrefunds" class="tsd-kind-icon">get<wbr>Refunds</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="amazonorderreportsapi.html#getshipments" class="tsd-kind-icon">get<wbr>Shipments</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="amazonorderreportsapi.html#start" class="tsd-kind-icon">start</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -2707,6 +2710,9 @@ img {
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/refund.html" class="tsd-kind-icon">Refund</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/shipment.html" class="tsd-kind-icon">Shipment</a>
 		</li>
 	</ul>
 </nav>
@@ -2735,6 +2741,7 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="amazonorderreportsapi.html#getitems" class="tsd-kind-icon">get<wbr>Items</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="amazonorderreportsapi.html#getrefunds" class="tsd-kind-icon">get<wbr>Refunds</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="amazonorderreportsapi.html#getshipments" class="tsd-kind-icon">get<wbr>Shipments</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="amazonorderreportsapi.html#start" class="tsd-kind-icon">start</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="amazonorderreportsapi.html#stop" class="tsd-kind-icon">stop</a></li>
 						</ul>
@@ -2754,7 +2761,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/dfdee5d/src/index.ts#L130">src/index.ts:130</a></li>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L152">src/index.ts:152</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2872,7 +2879,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/dfdee5d/src/index.ts#L224">src/index.ts:224</a></li>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L246">src/index.ts:246</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2919,7 +2926,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/dfdee5d/src/index.ts#L242">src/index.ts:242</a></li>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L264">src/index.ts:264</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2957,6 +2964,53 @@ img {
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getshipments" class="tsd-anchor"></a>
+				<h3>get<wbr>Shipments</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Shipments<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>endDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncGenerator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/shipment.html" class="tsd-signature-type" data-tsd-kind="Interface">Shipment</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L282">src/index.ts:282</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Retrieve shipments in the given date range. If no date range is given, the previous
+								30 days will be used.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>options: <span class="tsd-signature-symbol">{ </span>endDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>end<wbr>Date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>End of date range to report.</p>
+											</div>
+										</div>
+									</li>
+									<li class="tsd-parameter">
+										<h5>start<wbr>Date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Start of date range to report.</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncGenerator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/shipment.html" class="tsd-signature-type" data-tsd-kind="Interface">Shipment</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="start" class="tsd-anchor"></a>
 				<h3>start</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -2966,13 +3020,13 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/dfdee5d/src/index.ts#L196">src/index.ts:196</a></li>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L218">src/index.ts:218</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Start the internal Puppeteer isntance. This will be called automatically by
-								<a href="amazonorderreportsapi.html#getitems">getItems</a> and <a href="amazonorderreportsapi.html#getrefunds">getRefunds</a>, but you may also call it manually.</p>
+								<a href="amazonorderreportsapi.html#getitems">getItems</a>, <a href="amazonorderreportsapi.html#getrefunds">getRefunds</a> and <a href="amazonorderreportsapi.html#getshipments">getShipments</a>, but you may also call it manually.</p>
 							</div>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -2989,7 +3043,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/dfdee5d/src/index.ts#L214">src/index.ts:214</a></li>
+								<li>Defined in <a href="https://github.com/starsprung/amazon-order-reports-api/blob/d7a6c95/src/index.ts#L236">src/index.ts:236</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
